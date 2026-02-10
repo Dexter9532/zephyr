@@ -25,3 +25,12 @@ tests:
       - CONFIG_HTS221_TRIGGER_OWN_THREAD=y
     platform_exclude:
       - b_u585i_iot02a
+  sample.sensor.hts221.shields:
+    platform_allow:
+      - mikroe_clicker_2
+    integration_platforms:
+      - mikroe_clicker_2
+    extra_args:
+      - platform:mikroe_clicker_2:SHIELD="mikroe_temp_hum_click"
+    extra_configs:
+      - CONFIG_HTS221_TRIGGER_NONE=y
