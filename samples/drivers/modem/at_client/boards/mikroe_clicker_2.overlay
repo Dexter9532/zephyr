@@ -1,0 +1,13 @@
+/* SPDX-FileCopyrightText: Copyright (c) 2026 ID8 Engineering AB */
+/* SPDX-License-Identifier: Apache-2.0 */
+
+/ {
+  	chosen {
+  		zephyr,uart-pipe = &uart4;
+		zephyr,modem-uart = &usart2;
+  	};
+  };
+
+&usart2 {
+	current-speed = <115200>;
+};
