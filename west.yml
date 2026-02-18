@@ -195,12 +195,12 @@ manifest:
       groups:
         - hal
     - name: hal_microchip
-      revision: dbbff4a054d5888c3e8a27096335197a1a8186ca
+      revision: 1bf517970d408b318297804704f8c54cb2ac233c
       path: modules/hal/microchip
       groups:
         - hal
     - name: hal_nordic
-      revision: daad38f2e9f6c641849010d74fe02ea736d4d921
+      revision: 63f2083ff9bc9c39b39f0a874becc7cf8e011a2a
       path: modules/hal/nordic
       groups:
         - hal
@@ -210,7 +210,7 @@ manifest:
       groups:
         - hal
     - name: hal_nxp
-      revision: 10bc1dea4452f629473a0600554b4c85fb712d16
+      revision: 125d3a401db81445db940f502991cb45d3c4a9e3
       path: modules/hal/nxp
       groups:
         - hal
@@ -226,7 +226,7 @@ manifest:
         - hal
     - name: hal_realtek
       path: modules/hal/realtek
-      revision: 4f8703eb110220e3a98c7e883f672a575679b9e8
+      revision: eb1a4a2ad585087afcdd3a90fcb159d0de87f1f0
       groups:
         - hal
     - name: hal_renesas
@@ -347,7 +347,7 @@ manifest:
       revision: cf40f6dc7fc441ee6848ea2e177c4522588c1b8c
       path: modules/bsim_hw_models/nrf_hw_models
     - name: nrf_wifi
-      revision: 1e37ff7a739173cfe7adb248f9637d385a36c96b
+      revision: cebea8e27ceb91a7d4580d17db65f93669befe72
       path: modules/lib/nrf_wifi
     - name: open-amp
       revision: 5efe7974f9546582e99f5a842a816ea4b65f5227
@@ -357,7 +357,7 @@ manifest:
       path: modules/lib/openthread
     - name: percepio
       path: modules/debug/percepio
-      revision: 132ed87d617578a6cb70a2443f43e117c315e0f0
+      revision: 94866e8a7016a044e70fb71094facae5fd82fdab
       groups:
         - debug
     - name: picolibc
@@ -386,7 +386,7 @@ manifest:
       groups:
         - tee
     - name: trusted-firmware-m
-      revision: 6788687e013733d12f015b5d45b214019dea58f7
+      revision: 3a128df2bdebedf5a01726e86de3880991d6bb63
       path: modules/tee/tf-m/trusted-firmware-m
       groups:
         - tee
