@@ -576,6 +576,16 @@ Infineon
   * ``CONFIG_*_INFINEON_CAT1`` → ``CONFIG_*_INFINEON``
   * ``compatible: "infineon,cat1-adc"`` → ``compatible: "infineon,adc"``
 
+* Infineon Bluetooth HCI UART driver (:kconfig:option:`CONFIG_BT_HCI_UART_INFINEON`) with
+  compatible :dtcompatible:`infineon,bt-hci-uart` is now explicitly scoped to AIROC connectivity
+  chips that use HCI UART transport.
+  (:github:`103871`)
+
+  Corresponding Kconfig symbols and devicetree compatibles have also been updated:
+
+  * ``CONFIG_BT_CYW43XX`` → :kconfig:option:` CONFIG_BT_HCI_UART_INFINEON`
+  * ``dtcompatible: "infineon,cyw43xxx-bt-hci"`` → ``dtcompatible: "infineon,bt-hci-uart"``
+
 MDIO
 ====
 
@@ -829,6 +839,9 @@ Bluetooth Host
   protection as of the Bluetooth Core Specification v6.2. Stored bonds that were generated using
   this method will be downgraded to unauthenticated when loaded from persistent storage, resulting
   in a lower security level.
+* The Bluetooth Host no longer depends on :c:func:`k_poll`, and therefore doesn't select
+  :kconfig:option:`CONFIG_POLL`. If the application code itself depends on this, it needs to
+  explicitly enable :kconfig:option:`CONFIG_POLL` in its configuration.
 
 Bluetooth Audio
 ===============
