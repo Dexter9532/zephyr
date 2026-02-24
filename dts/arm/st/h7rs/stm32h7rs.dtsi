@@ -18,6 +18,7 @@
 #include <zephyr/dt-bindings/flash_controller/xspi.h>
 #include <zephyr/dt-bindings/dma/stm32_dma.h>
 #include <zephyr/dt-bindings/video/video-interfaces.h>
+#include <zephyr/dt-bindings/power/stm32h7rs_iocell.h>
 #include <freq.h>
 #include <mem.h>
 
@@ -178,6 +179,23 @@
 	};
 
 	soc {
+		iocell: iocell {
+			compatible = "st,stm32-iocell";
+			status = "disabled";
+
+			vddio {
+				domain = <STM32_DT_IOCELL_VDDIO>;
+			};
+
+			vddxspi1 {
+				domain = <STM32_DT_IOCELL_XSPI1>;
+			};
+
+			vddxspi2 {
+				domain = <STM32_DT_IOCELL_XSPI2>;
+			};
+		};
+
 		flash: flash-controller@52002000 {
 			compatible = "st,stm32-flash-controller", "st,stm32h7-flash-controller";
 			reg = <0x52002000 0x400>;
@@ -1002,7 +1020,7 @@
 			clocks = <&rcc STM32_CLOCK(APB2, 22)>,
 				 <&rcc STM32_SRC_PLL3_P SAI1_SEL(2)>;
 			dmas = <&gpdma1 1 63 (STM32_DMA_MODE_NORMAL | STM32_DMA_PRIORITY_HIGH |
-				STM32_DMA_16BITS)>;
+					      STM32_DMA_16BITS)>;
 			status = "disabled";
 		};
 
@@ -1014,7 +1032,7 @@
 			clocks = <&rcc STM32_CLOCK(APB2, 22)>,
 				 <&rcc STM32_SRC_PLL3_P SAI1_SEL(2)>;
 			dmas = <&gpdma1 0 64 (STM32_DMA_MODE_NORMAL | STM32_DMA_PRIORITY_HIGH |
-				STM32_DMA_16BITS)>;
+					      STM32_DMA_16BITS)>;
 			status = "disabled";
 		};
 

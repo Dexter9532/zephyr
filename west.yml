@@ -195,7 +195,7 @@ manifest:
       groups:
         - hal
     - name: hal_microchip
-      revision: 14bc95d3885e6c7b2303f93a3bf6a5506bbd943a
+      revision: 10920fe424f320067e95ae9480a30df9bbe63684
       path: modules/hal/microchip
       groups:
         - hal
@@ -260,7 +260,7 @@ manifest:
       groups:
         - hal
     - name: hal_tdk
-      revision: 60708f2c7bf078bc9cc3a7737ef955ec572c23e2
+      revision: fa54cb65535b0ed69564423c9e0bf4e7ee47dcb1
       path: modules/hal/tdk
       groups:
         - hal
@@ -357,7 +357,7 @@ manifest:
       path: modules/lib/openthread
     - name: percepio
       path: modules/debug/percepio
-      revision: 94866e8a7016a044e70fb71094facae5fd82fdab
+      revision: f9159fe3c79578e8d90c8593e83f9862d9b8962c
       groups:
         - debug
     - name: picolibc
@@ -386,7 +386,7 @@ manifest:
       groups:
         - tee
     - name: trusted-firmware-m
-      revision: 3a128df2bdebedf5a01726e86de3880991d6bb63
+      revision: 3ddfef0edd4fe5672cd63afbe3538509568170df
       path: modules/tee/tf-m/trusted-firmware-m
       groups:
         - tee
